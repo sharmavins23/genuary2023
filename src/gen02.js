@@ -1,5 +1,6 @@
 let canvas02 = document.getElementById("canvas-gen02");
 let ctx02 = canvas02.getContext("2d");
+let isPlaying02 = false;
 
 let time02_s = 0; // Time in seconds
 
@@ -9,7 +10,7 @@ draw02(); // Start drawing!
 
 // Set the canvas back to default white background
 function resetCanvas02() {
-    ctx02.fillStyle = "white";
+    ctx02.fillStyle = `rgb(0, 0, 0)`;
     ctx02.fillRect(0, 0, canvas02.width, canvas02.height);
 }
 
@@ -95,6 +96,23 @@ function placeCircle02() {
     ctx02.fill();
 }
 
+// Draw a play button
+function drawPlayButton02() {
+    ctx02.fillStyle = "black";
+    ctx02.beginPath();
+    ctx02.moveTo(canvas02.width / 2 - 10, canvas02.height / 2 - 10);
+    ctx02.lineTo(canvas02.width / 2 - 10, canvas02.height / 2 + 10);
+    ctx02.lineTo(canvas02.width / 2 + 10, canvas02.height / 2);
+    ctx02.fill();
+
+    ctx02.fillStyle = "white";
+    ctx02.beginPath();
+    ctx02.moveTo(canvas02.width / 2 - 8, canvas02.height / 2 - 8);
+    ctx02.lineTo(canvas02.width / 2 - 8, canvas02.height / 2 + 8);
+    ctx02.lineTo(canvas02.width / 2 + 8, canvas02.height / 2);
+    ctx02.fill();
+}
+
 // ===== Driver code ===========================================================
 
 function draw02loop() {
@@ -109,6 +127,12 @@ function draw02loop() {
     if (time02_s % n < 1 / 60) {
         placeCircle02();
     }
+
+    // Every n2 seconds, reset the canvas
+    let n2 = 5;
+    if (time02_s % n2 < 1 / 60) {
+        resetCanvas02();
+    }
 }
 
 function draw02() {
@@ -117,7 +141,15 @@ function draw02() {
 
     // Start the draw loop (60 fps) WITHOUT BLOCKING
     setTimeout(function a02() {
-        draw02loop();
+        if (isPlaying02) {
+            draw02loop();
+        } else {
+            drawPlayButton02();
+        }
         setTimeout(a02, 1000 / 60);
     }, 1000 / 60);
+}
+
+function playPause02() {
+    isPlaying02 = !isPlaying02;
 }

@@ -25,12 +25,15 @@
                 day of
                 <a target="_blank" class="magic-text" href="https://genuary.art"
                     >GENUARY 2023</a
-                >. Hover over a canvas to see a simple description of the piece.
+                >. Click on a canvas to play it, if the play button is
+                there.Hover over a canvas to see a simple description of the
+                piece. Be warned - Some of these pieces are extremely resource
+                heavy, so be careful!
             </p>
         </header>
 
         <section>
-            <div class="card">
+            <div class="card" onclick="playPause01()">
                 <header>
                     <h2><span class="magic-text">Day 1:</span> Perfect loop</h2>
                 </header>
@@ -72,7 +75,7 @@
                     <script src="src/gen01.js"></script>
                 </footer>
             </div>
-            <div class="card">
+            <div class="card" onclick="playPause02()">
                 <header>
                     <h2>
                         <span class="magic-text">Day 2:</span> Made in 10
@@ -109,6 +112,10 @@
                         writing this. I would have never finished this effect on
                         time without it.
                     </p>
+                    <p>
+                        I ended up adding some finishing touches after the timer
+                        ended, just to make the effect look neater.
+                    </p>
                 </div>
                 <footer>
                     <a
@@ -117,6 +124,51 @@
                         >&ltSource Code&gt</a
                     >
                     <script src="src/gen02.js"></script>
+                </footer>
+            </div>
+            <div class="card" onclick="playPause03()">
+                <header>
+                    <h2><span class="magic-text">Day 3:</span> Glitch art</h2>
+                </header>
+                <canvas id="canvas-gen03" width="500" height="500"></canvas>
+                <div class="description">
+                    <p>
+                        My initial thoughts of this prompt were simply: "Woah,
+                        this has potential. I can't wait to ruin that!"
+                    </p>
+                    <p>
+                        My idea was to create some form of Outrun-esque
+                        structure, and add glitches to get the desired effect.
+                        However, I wasn't exactly sure how I would implement
+                        "glitches" or "bugs", so I had to improvise. I also
+                        turned down the FPS of this display, which actually
+                        helped a lot to give a retro/old unpolished computer
+                        feel.
+                    </p>
+                    <p>
+                        While drawing certain things I noticed that I needed a
+                        3D-esque feel. Rather than doing the math, I knee-jerk
+                        asked Copilot to design something. It made something so
+                        ugly that it looked like a genuine glitch, so I made
+                        those occur on a very low chance and kept them in. The
+                        "buildings" add this interesting effect - They pop in
+                        and out, and sometimes are removed entirely!
+                    </p>
+                    <p>
+                        I love how pseudo-interactive this design is. There's an
+                        extremely small random chance for buildings to disappear
+                        entirely, and that disappearance is tied to an extremely
+                        small intermittent glitch. Potentially, all of the
+                        buildings can disappear!
+                    </p>
+                </div>
+                <footer>
+                    <a
+                        target="_blank"
+                        href="https://github.com/sharmavins23/genuary2023/blob/master/src/gen03.js"
+                        >&ltSource Code&gt</a
+                    >
+                    <script src="src/gen03.js"></script>
                 </footer>
             </div>
         </section>

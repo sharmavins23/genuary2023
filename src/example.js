@@ -1,6 +1,7 @@
 // An example for a draw function - Find and replace XX with number
 let canvasXX = document.getElementById("canvas-genXX");
-let ctxXX = canvas02.getContext("2d");
+let ctxXX = canvasXX.getContext("2d");
+let isPlayingXX = false;
 
 drawXX(); // Start drawing!
 
@@ -10,6 +11,23 @@ drawXX(); // Start drawing!
 function resetCanvasXX() {
     ctxXX.fillStyle = "white";
     ctxXX.fillRect(0, 0, canvasXX.width, canvasXX.height);
+}
+
+// Draw a play button (triangle pointing right) on the center of the canvas
+function drawPlayButtonXX() {
+    ctxXX.fillStyle = "black";
+    ctxXX.beginPath();
+    ctxXX.moveTo(canvasXX.width / 2 - 10, canvasXX.height / 2 - 10);
+    ctxXX.lineTo(canvasXX.width / 2 - 10, canvasXX.height / 2 + 10);
+    ctxXX.lineTo(canvasXX.width / 2 + 10, canvasXX.height / 2);
+    ctxXX.fill();
+
+    ctxXX.fillStyle = "white";
+    ctxXX.beginPath();
+    ctxXX.moveTo(canvasXX.width / 2 - 8, canvasXX.height / 2 - 8);
+    ctxXX.lineTo(canvasXX.width / 2 - 8, canvasXX.height / 2 + 8);
+    ctxXX.lineTo(canvasXX.width / 2 + 8, canvasXX.height / 2);
+    ctxXX.fill();
 }
 
 // ===== Driver code ===========================================================
@@ -22,7 +40,16 @@ function drawXX() {
 
     // Start the draw loop (60 fps) WITHOUT BLOCKING
     setTimeout(function aXX() {
-        drawXXloop();
+        if (isPlayingXX) {
+            drawXXloop();
+        } else {
+            drawPlayButtonXX();
+        }
+
         setTimeout(aXX, 1000 / 60);
     }, 1000 / 60);
+}
+
+function playPauseXX() {
+    isPlayingXX = !isPlayingXX;
 }

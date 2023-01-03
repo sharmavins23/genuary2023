@@ -6,6 +6,11 @@ html {
     --purple: rgb(123, 31, 162);
     --violet: rgb(103, 58, 183);
     --pink: rgb(244, 143, 177);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 body {

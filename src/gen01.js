@@ -1,5 +1,6 @@
 let canvas01 = document.getElementById("canvas-gen01");
 let ctx01 = canvas01.getContext("2d");
+let isPlaying01 = false;
 
 let time01 = 0; // Time in frames
 // Store a list of points to draw. Initial positions are radial from the center
@@ -59,6 +60,23 @@ function resetCanvas01() {
     }
 }
 
+// Draw a play button (triangle pointing right) on the center of the canvas
+function drawPlayButton01() {
+    ctx01.fillStyle = "black";
+    ctx01.beginPath();
+    ctx01.moveTo(canvas01.width / 2 - 10, canvas01.height / 2 - 10);
+    ctx01.lineTo(canvas01.width / 2 - 10, canvas01.height / 2 + 10);
+    ctx01.lineTo(canvas01.width / 2 + 10, canvas01.height / 2);
+    ctx01.fill();
+
+    ctx01.fillStyle = "white";
+    ctx01.beginPath();
+    ctx01.moveTo(canvas01.width / 2 - 8, canvas01.height / 2 - 8);
+    ctx01.lineTo(canvas01.width / 2 - 8, canvas01.height / 2 + 8);
+    ctx01.lineTo(canvas01.width / 2 + 8, canvas01.height / 2);
+    ctx01.fill();
+}
+
 // ===== Driver code ===========================================================
 
 function draw01loop() {
@@ -112,7 +130,16 @@ function draw01() {
 
     // Start the draw loop (60 fps) WITHOUT BLOCKING
     setTimeout(function a01() {
-        draw01loop();
+        if (isPlaying01) {
+            draw01loop();
+        } else {
+            drawPlayButton01();
+        }
+
         setTimeout(a01, 1000 / 60);
     }, 1000 / 60);
+}
+
+function playPause01() {
+    isPlaying01 = !isPlaying01;
 }
