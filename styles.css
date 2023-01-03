@@ -173,6 +173,8 @@ body > section > .card > .description > p {
     font-style: italic;
     margin: 0px;
     padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
 
     text-align: center;
 }

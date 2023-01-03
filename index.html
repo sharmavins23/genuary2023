@@ -9,8 +9,6 @@
             href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
             rel="stylesheet"
         />
-
-        <!-- Scripts -->
     </head>
     <body>
         <header>
@@ -31,17 +29,42 @@
         </header>
 
         <section>
-            <div class="card">
+            <div class="card" onshow="draw01()">
                 <header>
                     <h2><span class="magic-text">Day 1:</span> Perfect loop</h2>
                 </header>
-
-                <canvas id="gen01" width="500" height="500"></canvas>
+                <canvas id="canvas-gen01" width="500" height="500"></canvas>
                 <div class="description">
-                    <p class="description"></p>
+                    <p class="description">
+                        To me, the hardest part of a project is always starting
+                        out. As such, I was extremely worried about how this
+                        drawing would turn out, as it would set in motion a
+                        framework for the remainder of this challenge.
+                    </p>
+                    <p>
+                        In this case I was especially worried - It's my first
+                        time messing with HTML5 canvases, so things had to work
+                        properly. Unfortunately, I ended up struggling a lot,
+                        both due to basic mathematical errors and canvas
+                        orientation being confusing by nature.
+                    </p>
+                    <p>
+                        After browsing the internet for a bit I stumbled upon an
+                        interesting video of a series of dots moving in straight
+                        lines. These dots would individually move in simple
+                        motions, but together they would form a complex pattern.
+                    </p>
+                    <p>
+                        The effect turned out nice, though I couldn't perfectly
+                        synchronize the dots together. I like the folding and
+                        unfolding nature of the current design, though.
+                        Different winding angles change the way the points
+                        rotate in the code.
+                    </p>
                 </div>
                 <footer>
                     <a href="">&ltSource Code&gt</a>
+                    <script src="src/gen01.js"></script>
                 </footer>
             </div>
         </section>
