@@ -33,6 +33,31 @@ body {
     }
 }
 
+.magic-text {
+    animation: background-pan 3s linear infinite;
+    background: linear-gradient(
+        to right,
+        var(--purple),
+        var(--violet),
+        var(--pink),
+        var(--purple)
+    );
+    background-size: 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+    text-decoration: none;
+
+    transition: var(--transition-time);
+}
+
+.magic-text:hover {
+    text-decoration: underline var(--pink);
+
+    transition: var(--transition-time);
+}
+
 /* ===== HEADER ============================================================= */
 
 header {
@@ -54,6 +79,9 @@ header > h1 {
     font-size: 50px;
     font-family: "Roboto", sans-serif;
     text-align: center;
+    text-transform: uppercase;
+
+    text-shadow: 4px 3px 5px var(--pink);
 }
 
 header > p {
@@ -64,31 +92,27 @@ header > p {
     text-align: center;
 }
 
-header > p > a {
-    animation: background-pan 3s linear infinite;
-    background: linear-gradient(
-        to right,
-        var(--purple),
-        var(--violet),
-        var(--pink),
-        var(--purple)
-    );
-    background-size: 200%;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    white-space: nowrap;
+/* ===== CARDS ============================================================== */
 
-    text-decoration: none;
+/* ===== FOOTER ============================================================= */
 
-    transition: var(--transition-time);
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 20px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+    width: 1000px;
 }
 
-header > p > a:hover {
-    animation: none;
-    background: none;
-    color: white;
-    -webkit-text-fill-color: white;
+footer > p {
+    margin: 0px;
 
-    transition: var(--transition-time);
+    font-size: 15px;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
 }
