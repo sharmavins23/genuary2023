@@ -1,9 +1,9 @@
 let canvas01 = document.getElementById("canvas-gen01");
 let ctx01 = canvas01.getContext("2d");
 
-let time = 0; // Time in frames
+let time01 = 0; // Time in frames
 // Store a list of points to draw. Initial positions are radial from the center
-let points = [
+let points01 = [
     {
         color: "red",
     },
@@ -35,14 +35,14 @@ draw01(); // Start drawing!
 // ===== Math helpers ==========================================================
 
 // Custom sine function, to calculate offset based on time
-function customSine(t) {
+function customSine01(t) {
     return -1 * Math.cos(t / 60) + 1;
 }
 
 // ===== Canvas helpers ========================================================
 
 // Set the canvas back to default white background
-function resetCanvas() {
+function resetCanvas01() {
     ctx01.fillStyle = "white";
     ctx01.fillRect(0, 0, canvas01.width, canvas01.height);
 
@@ -63,17 +63,17 @@ function resetCanvas() {
 
 function draw01loop() {
     // Clear the canvas
-    resetCanvas();
+    resetCanvas01();
 
     // Iterate through all of the points and draw them
-    for (let i = 0; i < points.length; i++) {
-        let p = points[i];
+    for (let i = 0; i < points01.length; i++) {
+        let p = points01[i];
 
         // Compute the new position of the point, based on the time
         let enabled = true;
         if (enabled) {
-            p.x = p.x0 - 225 * p.dx * customSine(time + p.offset);
-            p.y = p.y0 - 225 * p.dy * customSine(time + p.offset);
+            p.x = p.x0 - 225 * p.dx * customSine01(time01 + p.offset);
+            p.y = p.y0 - 225 * p.dy * customSine01(time01 + p.offset);
         } else {
             p.x = p.x0;
             p.y = p.y0;
@@ -86,16 +86,16 @@ function draw01loop() {
         ctx01.fill();
     }
 
-    time += 1; // Increment the time
+    time01 += 1; // Increment the time
 }
 
 function draw01() {
     // Reset the canvas back to white
-    resetCanvas();
+    resetCanvas01();
 
     // Set all the initial positions and offsets incrementally
-    for (let i = 0; i < points.length; i++) {
-        let p = points[i];
+    for (let i = 0; i < points01.length; i++) {
+        let p = points01[i];
 
         // Set the initial position
         let angle = (i / 16) * 2 * Math.PI;
@@ -110,6 +110,9 @@ function draw01() {
         p.offset = i * 15;
     }
 
-    // Start the draw loop (60 fps)
-    setInterval(draw01loop, 1000 / 60);
+    // Start the draw loop (60 fps) WITHOUT BLOCKING
+    setTimeout(function a01() {
+        draw01loop();
+        setTimeout(a01, 1000 / 60);
+    }, 1000 / 60);
 }

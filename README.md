@@ -13,6 +13,10 @@ Genuary. Each day's picture is implemented via JavaScript, and
 [HTML5's Canvas API](https://www.w3schools.com/graphics/canvas_drawing.asp). Any
 animations will run at 60FPS within the browser.
 
+In order to create a new file, the `src/example.js` file has been added. All
+variables, functions, etc. have to be named separately so as to not pollute the
+namespace.
+
 [#genuary2023](https://genuary.art/)
 
 # License TL;DR
