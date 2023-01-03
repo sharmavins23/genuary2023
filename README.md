@@ -9,7 +9,9 @@ From the original page: "GENUARY is an artificially generated month of time
 where we build code that makes beautiful things."
 
 This repository houses the original source code for my asynchronous following of
-Genuary.
+Genuary. Each day's picture is implemented via JavaScript, and
+[HTML5's Canvas API](https://www.w3schools.com/graphics/canvas_drawing.asp). Any
+animations will run at 60FPS within the browser.
 
 [#genuary2023](https://genuary.art/)
 

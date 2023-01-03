@@ -52,7 +52,7 @@ body {
     transition: var(--transition-time);
 }
 
-.magic-text:hover {
+a.magic-text:hover {
     text-decoration: underline var(--pink);
 
     transition: var(--transition-time);
@@ -60,7 +60,7 @@ body {
 
 /* ===== HEADER ============================================================= */
 
-header {
+body > header {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -73,7 +73,7 @@ header {
     width: 1000px;
 }
 
-header > h1 {
+body > header > h1 {
     margin: 0px;
 
     font-size: 50px;
@@ -84,7 +84,7 @@ header > h1 {
     text-shadow: 4px 3px 5px var(--pink);
 }
 
-header > p {
+body > header > p {
     margin: 0px;
 
     font-size: 20px;
@@ -94,9 +94,116 @@ header > p {
 
 /* ===== CARDS ============================================================== */
 
+body > section {
+    display: grid;
+    grid-template-columns: 500px 500px 500px;
+
+    gap: 30px;
+}
+
+body > section > .card {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+
+    position: relative;
+
+    align-items: center;
+    justify-content: center;
+}
+
+body > section > .card > header {
+    width: 100%;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body > section > .card > header > h2 {
+    margin: 0px;
+
+    text-align: center;
+    font-size: 30px;
+    font-family: "Roboto", sans-serif;
+
+    width: 100%;
+}
+
+body > section > .card > header > h2 > span {
+    text-transform: uppercase;
+}
+
+body > section > .card > canvas {
+    border: 1px solid white;
+}
+
+body > section > .card > .description {
+    overflow: hidden;
+    position: absolute;
+    top: 61px; /* Borders are Annoying! */
+    left: 0px;
+
+    width: 500px;
+    height: 500px;
+
+    margin: 0px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    /* Blur the background */
+    background-color: rgba(0, 0, 0, 0.5);
+
+    opacity: 0%;
+    transition: var(--transition-time);
+}
+
+body > section > .card > .description:hover {
+    opacity: 100%;
+    transition: var(--transition-time);
+}
+
+body > section > .card > .description > p {
+    font-size: 18px;
+    font-family: "Roboto", sans-serif;
+    font-style: italic;
+    margin: 0px;
+    padding: 5px;
+
+    text-align: center;
+}
+
+body > section > .card > footer {
+    width: 100%;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body > section > .card > footer > a {
+    color: white;
+    text-decoration: none;
+
+    margin: 0px;
+    padding: 0px;
+
+    font-size: 20px;
+    font-family: "Roboto", sans-serif;
+}
+
+body > section > .card > footer > a:hover {
+    text-decoration: underline white;
+}
+
 /* ===== FOOTER ============================================================= */
 
-footer {
+body > footer {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -109,7 +216,7 @@ footer {
     width: 1000px;
 }
 
-footer > p {
+body > footer > p {
     margin: 0px;
 
     font-size: 15px;
