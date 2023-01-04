@@ -28,7 +28,19 @@
                 >. Click on a canvas to play it, if the play button is there.
                 Hover over a canvas to see a simple description of the piece. Be
                 warned - Some of these pieces are extremely resource heavy, so
-                be careful!
+                be careful.
+            </p>
+            <p>
+                I hope you enjoy some of these projects, as I personally enjoyed
+                implementing them. Thank you for viewing!
+            </p>
+            <p>
+                <a
+                    target="_blank"
+                    class="magic-text"
+                    href="https://github.com/sharmavins23"
+                    >@sharmavins23</a
+                >
             </p>
         </header>
 
@@ -169,6 +181,48 @@
                         >&ltSource Code&gt</a
                     >
                     <script src="src/gen03.js"></script>
+                </footer>
+            </div>
+            <div class="card" onclick="playPause04()">
+                <header>
+                    <h2>
+                        <span class="magic-text">Day 4:</span> Intersections
+                    </h2>
+                </header>
+                <canvas id="canvas-gen04" width="500" height="500"></canvas>
+                <div class="description">
+                    <p>
+                        Borrowing the concepts from the day before, I wanted to
+                        generate some form of dynamic intersection art. So, I
+                        had the idea of spawning two random points (with random
+                        velocities), and making intersections occur.
+                    </p>
+                    <p>
+                        This is actually the first big "failure" art piece I
+                        implemented, and I fiddled around with getting it to
+                        work for a while. Basically, I was checking collisions
+                        or intersections by checking the pixel data at the next
+                        point, but certain random trajectories would screw this
+                        up. I tried reimplementing it with a grid of known
+                        positions, but that didn't work either - Unfortunately,
+                        HTML5 canvas is not pixel-based, and will take in
+                        floating points as well, so the structure fell apart
+                        quickly.
+                    </p>
+                    <p>
+                        Still, I quite like the effect! Points will bounce
+                        around, and at a certain point when there's enough on
+                        the screen the piece will devolve into pure chaos
+                        quickly.
+                    </p>
+                </div>
+                <footer>
+                    <a
+                        target="_blank"
+                        href="https://github.com/sharmavins23/genuary2023/blob/master/src/gen04.js"
+                        >&ltSource Code&gt</a
+                    >
+                    <script src="src/gen04.js"></script>
                 </footer>
             </div>
         </section>

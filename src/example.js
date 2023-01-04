@@ -3,6 +3,9 @@ let canvasXX = document.getElementById("canvas-genXX");
 let ctxXX = canvasXX.getContext("2d");
 let isPlayingXX = false;
 
+let framesXX = 0; // Frame counter
+let fpsXX = 60; // Frames per second
+
 drawXX(); // Start drawing!
 
 // ===== Canvas helpers ========================================================
@@ -32,7 +35,10 @@ function drawPlayButtonXX() {
 
 // ===== Driver code ===========================================================
 
-function drawXXloop() {}
+function drawXXloop() {
+    // Increment the frame counter
+    framesXX += 1;
+}
 
 function drawXX() {
     // Reset the canvas
@@ -46,8 +52,8 @@ function drawXX() {
             drawPlayButtonXX();
         }
 
-        setTimeout(aXX, 1000 / 60);
-    }, 1000 / 60);
+        setTimeout(aXX, 1000 / fpsXX);
+    }, 1000 / fpsXX);
 }
 
 function playPauseXX() {
