@@ -109,7 +109,12 @@ function checkLineCollision04(point) {
             );
         }
 
-        log05warn("04", "Intersection detected.");
+        log05warn(
+            "04",
+            `Intersection detected at (${nextX.toFixed(0)}, ${nextY.toFixed(
+                0
+            )})`
+        );
     }
 }
 

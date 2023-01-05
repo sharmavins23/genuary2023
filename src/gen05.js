@@ -99,7 +99,7 @@ function log05error(gen, msg, level = 0) {
     elementToInsert.appendChild(infoSpan);
 
     // Add the message
-    elementToInsert.innerHTML += msg;
+    elementToInsert.innerHTML += format05message(msg);
 
     // Inject the div into the page
     inject05div(elementToInsert);
@@ -119,7 +119,7 @@ function log05warn(gen, msg, level = 0) {
     elementToInsert.appendChild(infoSpan);
 
     // Add the message
-    elementToInsert.innerHTML += msg;
+    elementToInsert.innerHTML += format05message(msg);
 
     // Inject the div into the page
     inject05div(elementToInsert);
