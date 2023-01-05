@@ -94,6 +94,16 @@ function placeCircle02() {
     ctx02.arc(x, y, r, 0, 2 * Math.PI);
     ctx02.fillStyle = "rgb(" + rColor + "," + gColor + "," + bColor + ")";
     ctx02.fill();
+
+    let hexColor = rgbToHex05(rColor, gColor, bColor);
+    log05info(
+        "02",
+        `Placed circle (radius=${r.toFixed(
+            3
+        )}, color=rgb(${rColor.toFixed()}, ${gColor.toFixed()}, ${bColor.toFixed()})) at (${x.toFixed(
+            3
+        )}, ${y.toFixed(3)}).`
+    );
 }
 
 // Draw a play button
@@ -132,6 +142,8 @@ function draw02loop() {
     let n2 = 5;
     if (time02_s % n2 < 1 / 60) {
         resetCanvas02();
+
+        log05info("02", "Reset HTML5 canvas.");
     }
 }
 
@@ -152,4 +164,10 @@ function draw02() {
 
 function playPause02() {
     isPlaying02 = !isPlaying02;
+
+    if (isPlaying02) {
+        log05info("02", "Playing animation.");
+    } else {
+        log05info("02", "Paused animation.");
+    }
 }

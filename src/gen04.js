@@ -55,12 +55,20 @@ function generatePoint04() {
 
 // Check for a wall collision
 function checkWallCollisions04(point) {
+    let collision = false;
+
     if (point.x < 0 || point.x > canvas04.width) {
         point.vx *= -1;
+        collision = true;
     }
 
     if (point.y < 0 || point.y > canvas04.height) {
         point.vy *= -1;
+        collision = true;
+    }
+
+    if (collision) {
+        log05warn("04", "Wall collision detected.");
     }
 
     return point;
@@ -91,7 +99,17 @@ function checkLineCollision04(point) {
             // On a line collision, increment the number of points
             n04++;
             points04.push(generatePoint04());
+            let newPointX = points04[points04.length - 1].x,
+                newPointY = points04[points04.length - 1].y;
+            log05info(
+                "04",
+                `New point generated at (${newPointX.toFixed(
+                    0
+                )}, ${newPointY.toFixed(0)})`
+            );
         }
+
+        log05warn("04", "Intersection detected.");
     }
 }
 
@@ -131,6 +149,8 @@ function draw04loop() {
         for (let i = 0; i < n04; i++) {
             points04.push(generatePoint04());
         }
+
+        log05info("04", "Board cleared and restarting animation.");
     }
 
     // Increment the frame counter
@@ -160,4 +180,10 @@ function draw04() {
 
 function playPause04() {
     isPlaying04 = !isPlaying04;
+
+    if (isPlaying04) {
+        log05info("04", "Playing animation.");
+    } else {
+        log05info("04", "Paused animation.");
+    }
 }

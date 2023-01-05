@@ -44,6 +44,8 @@ function drawXX() {
     // Reset the canvas
     resetCanvasXX();
 
+    logXXinfo("Reset canvas XX.");
+
     // Start the draw loop (60 fps) WITHOUT BLOCKING
     setTimeout(function aXX() {
         if (isPlayingXX) {
@@ -58,4 +60,10 @@ function drawXX() {
 
 function playPauseXX() {
     isPlayingXX = !isPlayingXX;
+
+    if (isPlayingXX) {
+        log05info("XX", "Playing animation.");
+    } else {
+        log05info("XX", "Paused animation.");
+    }
 }

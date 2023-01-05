@@ -67,6 +67,8 @@ function drawNoise03() {
                 1
             );
         }
+
+        log05warn("03", "Video stream glitched due to noise artifact.");
     }
 }
 
@@ -189,13 +191,19 @@ function drawBuildings03() {
     if (indexToRemove03 > -1 && indexToRemove03 < buildings03Locations.length) {
         buildings03Locations.splice(indexToRemove03, 1);
         indexToRemove03 = -1;
+
+        log05warn(
+            "03",
+            `Building destroyed! Remaining: ${buildings03Locations.length}`
+        );
     } else {
         // If it's out of bounds, set it back to -1
         indexToRemove03 = -1;
     }
 
     if (buildings03Locations.length === 0) {
-        let n = 30;
+        // Random number of buildings between 25 and 50
+        let n = Math.floor(Math.random() * 25) + 25;
         for (let i = 0; i < n; i++) {
             buildings03Locations.push({
                 leftside: Math.random() < 0.5 ? false : true, // Is it on the left?
@@ -210,6 +218,8 @@ function drawBuildings03() {
         buildings03Locations.sort((a, b) => {
             return a.y - b.y;
         });
+
+        log05info("03", `Regenerated ${n} buildings.`);
     }
 
     // Iterate through all of the x-y positions and draw the buildings
@@ -243,7 +253,7 @@ function drawBuildings03() {
         }
 
         // Randomly and extremely rarely, add a strange glitch artifact
-        if (Math.random() < 0.005) {
+        if (Math.random() < 0.001) {
             ctx03.fillStyle = "rgb(255, 0, 0)";
             ctx03.fillRect(
                 posX,
@@ -269,6 +279,13 @@ function drawBuildings03() {
             // When this glitch artifact occurs, remove a random building
             indexToRemove03 = Math.floor(
                 Math.random() * buildings03Locations.length
+            );
+
+            log05error(
+                "03",
+                `Unknown error artifact at (${posX.toFixed(0)}, ${(
+                    building.y - building.height
+                ).toFixed(0)}).`
             );
         }
     }
@@ -324,4 +341,10 @@ function draw03() {
 
 function playPause03() {
     isPlaying03 = !isPlaying03;
+
+    if (isPlaying03) {
+        log05info("03", "Playing animation.");
+    } else {
+        log05info("03", "Paused animation.");
+    }
 }

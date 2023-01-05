@@ -142,4 +142,10 @@ function draw01() {
 
 function playPause01() {
     isPlaying01 = !isPlaying01;
+
+    if (isPlaying01) {
+        log05info("01", "Playing animation.");
+    } else {
+        log05info("01", "Paused animation.");
+    }
 }
