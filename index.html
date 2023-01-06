@@ -10,6 +10,7 @@
             rel="stylesheet"
         />
         <link rel="stylesheet" href="src/gen05.css" />
+        <link rel="stylesheet" href="src/gen06.css" />
     </head>
     <body>
         <header>
@@ -276,6 +277,158 @@
                         >&ltSource Code&gt</a
                     >
                     <script src="src/gen05.js"></script>
+                </footer>
+            </div>
+            <div class="card" onclick="regenerate06()">
+                <header>
+                    <h2>
+                        <span class="magic-text">Day 6:</span> Steal Like An
+                        Artist
+                    </h2>
+                </header>
+                <div class="gen06display">
+                    <div class="gen06input">
+                        <canvas
+                            id="canvas06content"
+                            width="248"
+                            height="248"
+                        ></canvas>
+                        <canvas
+                            id="canvas06style"
+                            width="248"
+                            height="248"
+                        ></canvas>
+                    </div>
+                    <canvas id="canvas06out" width="248" height="248"></canvas>
+                </div>
+                <div class="images06">
+                    <div id="content06">
+                        <img
+                            crossorigin="anonymous"
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Golden_Gate_Bridge_from_Battery_Spencer.jpg/640px-Golden_Gate_Bridge_from_Battery_Spencer.jpg"
+                        />
+                        <img
+                            crossorigin="anonymous"
+                            src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Green_Sea_Turtle_grazing_seagrass.jpg"
+                        />
+                        <img
+                            crossorigin="anonymous"
+                            src="https://upload.wikimedia.org/wikipedia/commons/0/00/Tuebingen_Neckarfront.jpg"
+                        />
+                        <img
+                            crossorigin="anonymous"
+                            src="https://i0.wp.com/static01.nyt.com/images/2021/09/14/science/07CAT-STRIPES/07CAT-STRIPES-mediumSquareAt3X-v2.jpg?resize=248%2C248&ssl=1"
+                        />
+                        <img
+                            crossorigin="anonymous"
+                            src="https://positivelypittsburgh.com/wp-content/uploads/2019/06/point-500.jpg"
+                        />
+                        <img
+                            crossorigin="anonymous"
+                            src="https://images.pexels.com/photos/39561/solar-flare-sun-eruption-energy-39561.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                        />
+                    </div>
+                    <div id="style06">
+                        <img
+                            crossorigin="anonymous"
+                            src="https://upload.wikimedia.org/wikipedia/commons/0/0a/The_Great_Wave_off_Kanagawa.jpg"
+                        />
+                        <img
+                            crossorigin="anonymous"
+                            src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Vassily_Kandinsky%2C_1913_-_Composition_7.jpg"
+                        />
+                        <img
+                            crossorigin="anonymous"
+                            src="https://upload.wikimedia.org/wikipedia/commons/6/68/Pillars_of_creation_2014_HST_WFC3-UVIS_full-res_denoised.jpg"
+                        />
+                        <img
+                            crossorigin="anonymous"
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/1024px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg"
+                        />
+                        <img
+                            crossorigin="anonymous"
+                            src="https://upload.wikimedia.org/wikipedia/commons/b/b7/JMW_Turner_-_Nantes_from_the_Ile_Feydeau.jpg"
+                        />
+                        <img
+                            crossorigin="anonymous"
+                            src="https://upload.wikimedia.org/wikipedia/commons/c/c5/Edvard_Munch%2C_1893%2C_The_Scream%2C_oil%2C_tempera_and_pastel_on_cardboard%2C_91_x_73_cm%2C_National_Gallery_of_Norway.jpg"
+                        />
+                        <img
+                            crossorigin="anonymous"
+                            src="https://upload.wikimedia.org/wikipedia/en/4/4c/Les_Demoiselles_d%27Avignon.jpg"
+                        />
+                        <img
+                            crossorigin="anonymous"
+                            src="https://upload.wikimedia.org/wikipedia/en/3/3c/Pablo_Picasso%2C_1911-12%2C_Violon_%28Violin%29%2C_oil_on_canvas%2C_Kr%C3%B6ller-M%C3%BCller_Museum%2C_Otterlo%2C_Netherlands.jpg"
+                        />
+                        <img
+                            crossorigin="anonymous"
+                            src="https://upload.wikimedia.org/wikipedia/en/7/7f/Pablo_Picasso%2C_1911%2C_Still_Life_with_a_Bottle_of_Rum%2C_oil_on_canvas%2C_61.3_x_50.5_cm%2C_Metropolitan_Museum_of_Art%2C_New_York.jpg"
+                        />
+                        <img
+                            crossorigin="anonymous"
+                            src="https://upload.wikimedia.org/wikipedia/commons/3/36/Large_bonfire.jpg"
+                        />
+                        <img
+                            crossorigin="anonymous"
+                            src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Derkovits_Gyula_Woman_head_1922.jpg"
+                        />
+                        <img
+                            crossorigin="anonymous"
+                            src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Untitled_%28Still_life%29_%281913%29_-_Amadeo_Souza-Cardoso_%281887-1918%29_%2817385824283%29.jpg"
+                        />
+                        <img
+                            crossorigin="anonymous"
+                            src="https://upload.wikimedia.org/wikipedia/commons/3/37/Derkovits_Gyula_Talig%C3%A1s_1920.jpg"
+                        />
+                        <img
+                            crossorigin="anonymous"
+                            src="https://upload.wikimedia.org/wikipedia/commons/7/7d/Amadeo_de_Souza-Cardoso%2C_1915_-_Landscape_with_black_figure.jpg"
+                        />
+                    </div>
+                </div>
+                <div class="description">
+                    <p>
+                        For the sake of full transparency, I have never *once*
+                        attempted to mess with artificial intelligence. However,
+                        the prompt is so obviously related to artificial
+                        intelligence, so I figured out it was high time I tried.
+                    </p>
+                    <p>
+                        As such, I decided to attempt to get started via a
+                        Neural Style Transfer implementation. As I had never
+                        worked with artificial intelligence before, I was
+                        "stealing" the entire procedure as well (credits are in
+                        the source code!)
+                    </p>
+                    <p>
+                        By technicality, this means that I didn't follow the
+                        prompt - I'm stealing like a programmer, not like an
+                        artist. But, with the recent debate over digitally
+                        generated art pieces, I think this falls in line with
+                        the spirit of the prompt, at least.
+                    </p>
+                    <p>
+                        Upon clicking, the site will select two random images,
+                        one for the content and one for the style. The style of
+                        the style image will be transferred to the other image,
+                        thus generating a new image in the style of the artist.
+                    </p>
+                    <p>
+                        This day was by far the biggest headache I've ever
+                        encountered, particularly due to the fact that the guide
+                        was extremely poorly documented. I had to spend a lot of
+                        time in sandboxes debugging memory leaks.
+                    </p>
+                </div>
+                <footer>
+                    <a
+                        target="_blank"
+                        href="https://github.com/sharmavins23/genuary2023/blob/master/src/gen06.js"
+                        >&ltSource Code&gt</a
+                    >
+                    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.12.0/dist/tf.min.js"></script>
+                    <script src="src/gen06.js"></script>
                 </footer>
             </div>
         </section>
