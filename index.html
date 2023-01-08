@@ -11,6 +11,7 @@
         />
         <link rel="stylesheet" href="src/gen05.css" />
         <link rel="stylesheet" href="src/gen06.css" />
+        <link rel="stylesheet" href="src/gen07.css" />
     </head>
     <body>
         <header>
@@ -235,7 +236,7 @@
             </div>
             <div class="card">
                 <header>
-                    <h2><span class="magic-text">Day 5:</span> Debug View</h2>
+                    <h2><span class="magic-text">Day 5:</span> Debug view</h2>
                 </header>
                 <div id="gen05console" class="gen05console">
                     <div class="gen05consoleInner"></div>
@@ -282,8 +283,8 @@
             <div class="card" onclick="regenerate06()">
                 <header>
                     <h2>
-                        <span class="magic-text">Day 6:</span> Steal Like An
-                        Artist
+                        <span class="magic-text">Day 6:</span> Steal like an
+                        artist
                     </h2>
                 </header>
                 <div class="gen06display">
@@ -433,6 +434,88 @@
                     >
                     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.12.0/dist/tf.min.js"></script>
                     <script src="src/gen06.js"></script>
+                </footer>
+            </div>
+            <div class="card">
+                <header>
+                    <h2>
+                        <span class="magic-text">Day 7:</span> Color palette
+                        from an album
+                    </h2>
+                </header>
+                <canvas id="canvas-gen07" width="500" height="500"></canvas>
+                <div class="images07">
+                    <img
+                        id="stitchedImage07"
+                        crossorigin="anonymous"
+                        src="https://media.istockphoto.com/id/478279457/vector/pittsburgh-city-skyline-silhouette.jpg?s=612x612&w=0&k=20&c=ge6LaB-wS_Zpbei4bdbholQUvA-1LLaMB_YQ4D3wjIQ="
+                    />
+                    <canvas
+                        id="canvasInternalStitched-gen07"
+                        width="325"
+                        height="250"
+                    ></canvas>
+                    <img
+                        id="leaves07"
+                        crossorigin="anonymous"
+                        src="https://media.istockphoto.com/id/1187591975/vector/banana-leaves-seamless-tropical-pattern.jpg?s=1024x1024&w=is&k=20&c=rCLjTwynhNK2oVPupeE_8RemeALIS15T9g6fMi0gAJE="
+                    />
+                    <img
+                        id="forest07"
+                        crossorigin="anonymous"
+                        src="https://files.dnr.state.mn.us/mcvmagazine/issues/2020/may-jun/img//forestclimate/forestclimate02_sm.jpg"
+                    />
+                    <canvas
+                        id="canvasInternalTrees-gen07"
+                        width="110"
+                        height="110"
+                    />
+                    <canvas id="canvasInternal-gen07"></canvas>
+                </div>
+                <div class="description">
+                    <p>
+                        My favorite album is probably Chronologist's Equinox II,
+                        though I'm entirely not sure (and that's up for debate).
+                        Rather than sampling a color from that palette, I wanted
+                        to create code such that you, the viewer, could sample
+                        colors from YOUR favorite palette, and I could create a
+                        Chronologist-esque album cover using it.
+                    </p>
+                    <p>
+                        To do this, I first had to crudely make an album cover
+                        that looked like the Chronologist album. I added some
+                        interesting features to the album in an attempt to
+                        "personalize" it.
+                    </p>
+                    <p>
+                        This was the first project where the code actually
+                        leaves the 500x500 box - I have a form submit
+                        underneath. The form submit seems to have some latency,
+                        though, so it's staggered (when you upload the next
+                        file, it starts working properly - Weird async
+                        JavaScript that I don't want to debug!)
+                    </p>
+                    <p>
+                        I like the output, and for a lot of input images it
+                        actually looks pretty nice.
+                    </p>
+                </div>
+                <footer>
+                    <a
+                        target="_blank"
+                        href="https://github.com/sharmavins23/genuary2023/blob/master/src/gen04.js"
+                        >&ltSource Code&gt</a
+                    >
+                    <input
+                        onchange="regenerate07()"
+                        type="file"
+                        id="imgIn07"
+                        name="imgIn07"
+                        accept="image/*"
+                        autocomplete="off"
+                        value=""
+                    />
+                    <script src="src/gen07.js"></script>
                 </footer>
             </div>
         </section>

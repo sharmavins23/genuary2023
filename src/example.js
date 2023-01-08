@@ -44,7 +44,7 @@ function drawXX() {
     // Reset the canvas
     resetCanvasXX();
 
-    logXXinfo("Reset canvas XX.");
+    log05info("XX", "Reset canvas XX.");
 
     // Start the draw loop (60 fps) WITHOUT BLOCKING
     setTimeout(function aXX() {
