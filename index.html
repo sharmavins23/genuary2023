@@ -518,6 +518,50 @@
                     <script src="src/gen07.js"></script>
                 </footer>
             </div>
+            <div class="card" onclick="playPause08()">
+                <header>
+                    <h2>
+                        <span class="magic-text">Day 8:</span> Signed distance
+                        functions
+                    </h2>
+                </header>
+                <canvas id="canvas-gen08" width="500" height="500"></canvas>
+                <div class="description">
+                    <p>
+                        Special thanks to Piter Pasma for the explanation about
+                        signed distance functions, since these are something I
+                        have never messed with. This actually sparked my
+                        interest in applying more numerical methods to this
+                        project (you'll see some tomorrow!)
+                    </p>
+                    <p>
+                        I wanted to create something a bit interesting for this,
+                        so I actually started messing with cubic splines. My
+                        goal was to generate a random point, compute some
+                        curvature to that point, and draw a trail of a dot going
+                        through. If the dot passes through a giant circle in the
+                        middle, the trail would become red, and outside it would
+                        be blue.
+                    </p>
+                    <p>
+                        I like the effect, though it was probably a better idea
+                        for me to have messed with making a particle physics
+                        engine. Right now, the point bounces around and modifies
+                        its velocity in a linear way, thus leading to these
+                        really bumpy transitions. I would have much preferred
+                        modifying the point's acceleration, which is something
+                        that (had I had more time) I would have implemented.
+                    </p>
+                </div>
+                <footer>
+                    <a
+                        target="_blank"
+                        href="https://github.com/sharmavins23/genuary2023/blob/master/src/gen08.js"
+                        >&ltSource Code&gt</a
+                    >
+                    <script src="src/gen08.js"></script>
+                </footer>
+            </div>
         </section>
 
         <footer>
