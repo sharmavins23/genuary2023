@@ -9,9 +9,10 @@
             href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
             rel="stylesheet"
         />
-        <link rel="stylesheet" href="src/gen05.css" />
-        <link rel="stylesheet" href="src/gen06.css" />
-        <link rel="stylesheet" href="src/gen07.css" />
+        <link rel="stylesheet" href="src/src05/gen05.css" />
+        <link rel="stylesheet" href="src/src06/gen06.css" />
+        <link rel="stylesheet" href="src/src07/gen07.css" />
+        <link rel="stylesheet" href="src/src10/gen10.css" />
     </head>
     <body>
         <header>
@@ -90,10 +91,10 @@
                 <footer>
                     <a
                         target="_blank"
-                        href="https://github.com/sharmavins23/genuary2023/blob/master/src/gen01.js"
+                        href="https://github.com/sharmavins23/genuary2023/blob/master/src/src01/gen01.js"
                         >&ltSource Code&gt</a
                     >
-                    <script src="src/gen01.js"></script>
+                    <script src="src/src01/gen01.js"></script>
                 </footer>
             </div>
             <div class="card" onclick="playPause02()">
@@ -141,10 +142,10 @@
                 <footer>
                     <a
                         target="_blank"
-                        href="https://github.com/sharmavins23/genuary2023/blob/master/src/gen02.js"
+                        href="https://github.com/sharmavins23/genuary2023/blob/master/src/src02/gen02.js"
                         >&ltSource Code&gt</a
                     >
-                    <script src="src/gen02.js"></script>
+                    <script src="src/src02/gen02.js"></script>
                 </footer>
             </div>
             <div class="card" onclick="playPause03()">
@@ -186,10 +187,10 @@
                 <footer>
                     <a
                         target="_blank"
-                        href="https://github.com/sharmavins23/genuary2023/blob/master/src/gen03.js"
+                        href="https://github.com/sharmavins23/genuary2023/blob/master/src/src03/gen03.js"
                         >&ltSource Code&gt</a
                     >
-                    <script src="src/gen03.js"></script>
+                    <script src="src/src03/gen03.js"></script>
                 </footer>
             </div>
             <div class="card" onclick="playPause04()">
@@ -228,10 +229,10 @@
                 <footer>
                     <a
                         target="_blank"
-                        href="https://github.com/sharmavins23/genuary2023/blob/master/src/gen04.js"
+                        href="https://github.com/sharmavins23/genuary2023/blob/master/src/src04/gen04.js"
                         >&ltSource Code&gt</a
                     >
-                    <script src="src/gen04.js"></script>
+                    <script src="src/src04/gen04.js"></script>
                 </footer>
             </div>
             <div class="card">
@@ -274,10 +275,10 @@
                 <footer>
                     <a
                         target="_blank"
-                        href="https://github.com/sharmavins23/genuary2023/blob/master/src/gen05.js"
+                        href="https://github.com/sharmavins23/genuary2023/blob/master/src/src05/gen05.js"
                         >&ltSource Code&gt</a
                     >
-                    <script src="src/gen05.js"></script>
+                    <script src="src/src05/gen05.js"></script>
                 </footer>
             </div>
             <div class="card" onclick="regenerate06()">
@@ -429,11 +430,11 @@
                 <footer>
                     <a
                         target="_blank"
-                        href="https://github.com/sharmavins23/genuary2023/blob/master/src/gen06.js"
+                        href="https://github.com/sharmavins23/genuary2023/blob/master/src/src06/gen06.js"
                         >&ltSource Code&gt</a
                     >
                     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.12.0/dist/tf.min.js"></script>
-                    <script src="src/gen06.js"></script>
+                    <script src="src/src06/gen06.js"></script>
                 </footer>
             </div>
             <div class="card">
@@ -503,7 +504,7 @@
                 <footer>
                     <a
                         target="_blank"
-                        href="https://github.com/sharmavins23/genuary2023/blob/master/src/gen04.js"
+                        href="https://github.com/sharmavins23/genuary2023/blob/master/src/src04/gen04.js"
                         >&ltSource Code&gt</a
                     >
                     <input
@@ -515,7 +516,7 @@
                         autocomplete="off"
                         value=""
                     />
-                    <script src="src/gen07.js"></script>
+                    <script src="src/src07/gen07.js"></script>
                 </footer>
             </div>
             <div class="card" onclick="playPause08()">
@@ -556,10 +557,10 @@
                 <footer>
                     <a
                         target="_blank"
-                        href="https://github.com/sharmavins23/genuary2023/blob/master/src/gen08.js"
+                        href="https://github.com/sharmavins23/genuary2023/blob/master/src/src08/gen08.js"
                         >&ltSource Code&gt</a
                     >
-                    <script src="src/gen08.js"></script>
+                    <script src="src/src08/gen08.js"></script>
                 </footer>
             </div>
             <div class="card" onclick="draw09()">
@@ -593,10 +594,61 @@
                 <footer>
                     <a
                         target="_blank"
-                        href="https://github.com/sharmavins23/genuary2023/blob/master/src/gen09.js"
+                        href="https://github.com/sharmavins23/genuary2023/blob/master/src/src09/gen09.js"
                         >&ltSource Code&gt</a
                     >
-                    <script src="src/gen09.js"></script>
+                    <script src="src/src09/gen09.js"></script>
+                </footer>
+            </div>
+            <div class="card" onclick="playPause10(event)">
+                <header>
+                    <h2>
+                        <span class="magic-text">Day 10:</span> Generative music
+                    </h2>
+                </header>
+                <canvas id="canvas-gen10" width="500" height="500"></canvas>
+                <audio id="audio10" controls loop>
+                    <source src="src/src10/music10.wav" type="audio/wav" />
+                    Your browser does not support the audio element.
+                </audio>
+                <canvas id="gen10internal" width="500" height="500"></canvas>
+                <div class="description">
+                    <p>
+                        I had a great idea for this project to be focused
+                        towards taking a song and drawing out a waveform for it.
+                        I originally wanted to have an upload function for
+                        uploading different files, but unfortunately I got
+                        behind on Genuary and had to catch up quickly.
+                    </p>
+                    <p>
+                        I was actually really worried about the functionality of
+                        this being extremely poor, or hard to mess with.
+                        Conceptually, I had to consume the waveform, and compute
+                        the Fourier transform to get the frequencies on EVERY
+                        draw call. This is... consuming, to say the least.
+                        However, this was a lot easier to make than I thought it
+                        would be.
+                    </p>
+                    <p>
+                        The effect is really nice, though, and I quite like how
+                        it turned out. I might modify it in the future to sample
+                        fewer points (right now it's doing a 1024-point FFT,
+                        which is default for the audio analyzer API). However,
+                        I'm still happy with it.
+                    </p>
+                    <p>
+                        The song is Zeitreise, by MarioBeatz. It was removed
+                        from Soundcloud, and the fact that it's not on Spotify
+                        is criminal.
+                    </p>
+                </div>
+                <footer>
+                    <a
+                        target="_blank"
+                        href="https://github.com/sharmavins23/genuary2023/blob/master/src/src10/gen10.js"
+                        >&ltSource Code&gt</a
+                    >
+                    <script src="src/src10/gen10.js"></script>
                 </footer>
             </div>
         </section>

@@ -1,0 +1,16 @@
+.images07 {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 0%;
+    height: 0%;
+}
+
+.images07 > img {
+    display: none;
+    visibility: hidden;
+    width: 0%;
+    height: 0%;
+}
