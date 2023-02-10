@@ -13,6 +13,11 @@ Genuary. Each day's picture is implemented via JavaScript, and
 [HTML5's Canvas API](https://www.w3schools.com/graphics/canvas_drawing.asp). Any
 animations will run at 60FPS within the browser.
 
+## Template
+
+The project is written using a very simple template that can be extended or
+reused for individual projects.
+
 In order to create a new file, the `src/example.js` file has been added. All
 variables, functions, etc. have to be named separately so as to not pollute the
 namespace.

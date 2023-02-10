@@ -19,23 +19,6 @@ function resetCanvas11() {
     ctx11.fillRect(0, 0, canvas11.width, canvas11.height);
 }
 
-// Draw a play button (triangle pointing right) on the center of the canvas
-function drawPlayButton11() {
-    ctx11.fillStyle = "black";
-    ctx11.beginPath();
-    ctx11.moveTo(canvas11.width / 2 - 10, canvas11.height / 2 - 10);
-    ctx11.lineTo(canvas11.width / 2 - 10, canvas11.height / 2 + 10);
-    ctx11.lineTo(canvas11.width / 2 + 10, canvas11.height / 2);
-    ctx11.fill();
-
-    ctx11.fillStyle = "white";
-    ctx11.beginPath();
-    ctx11.moveTo(canvas11.width / 2 - 8, canvas11.height / 2 - 8);
-    ctx11.lineTo(canvas11.width / 2 - 8, canvas11.height / 2 + 8);
-    ctx11.lineTo(canvas11.width / 2 + 8, canvas11.height / 2);
-    ctx11.fill();
-}
-
 // Add paint flecks to the canvas
 function addPaintFlecks() {
     // Get the canvas pixel data
