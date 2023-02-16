@@ -1,6 +1,6 @@
 let canvas26 = document.getElementById("canvas-gen26");
 let ctx26 = canvas26.getContext("2d");
-let isPlaying26 = true;
+let isPlaying26 = false;
 
 let frames26 = 0; // Frame counter
 let fps26 = 60; // Frames per second
